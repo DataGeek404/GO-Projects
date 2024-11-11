@@ -1,0 +1,16 @@
+# example.log
+
+2024-11-11 09:00:01 INFO    Starting application server...
+2024-11-11 09:00:01 INFO    Server listening on port 8080
+2024-11-11 09:00:02 INFO    Database connection established
+2024-11-11 09:00:05 INFO    User 'admin' logged in from IP 192.168.1.10
+2024-11-11 09:00:10 WARNING Slow response time detected: 500ms
+2024-11-11 09:00:12 ERROR   Failed to retrieve data from API endpoint '/api/v1/data' (TimeoutError)
+2024-11-11 09:00:15 INFO    Scheduled task 'backup' started
+2024-11-11 09:00:25 INFO    Scheduled task 'backup' completed successfully
+2024-11-11 09:01:00 INFO    User 'john.doe' logged in from IP 192.168.1.15
+2024-11-11 09:01:05 INFO    Data successfully retrieved from API endpoint '/api/v1/data'
+2024-11-11 09:01:08 WARNING High memory usage detected: 85%
+2024-11-11 09:01:12 INFO    User 'admin' logged out
+2024-11-11 09:01:20 INFO    Server shutting down...
+2024-11-11 09:01:21 INFO    Server shutdown complete
