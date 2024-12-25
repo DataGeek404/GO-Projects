@@ -1,0 +1,28 @@
+import (
+    "encoding/json"
+    "io/ioutil"
+    "os"
+)
+
+// SaveTasks saves tasks to a file
+func (tm *TaskManager) SaveTasks(filename string) error {
+    data, err := json.Marshal(tm.Tasks)
+    if err != nil {
+        return err
+    }
+    return ioutil.WriteFile(filename, data, 0644)
+}
+
+// LoadTasks loads tasks from a file
+func (tm *TaskManager) LoadTasks(filename string) error {
+    file, err := os.Open(filename)
+    if err != nil {
+        return err
+    }
+    defer file.Close()
+    data, err := ioutil.ReadAll(file)
+    if err != nil {
+        return err
+    }
+    return json.Unmarshal(data, &tm.Tasks)
+}
